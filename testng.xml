@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cucumber Selenium Test Suite" verbose="1">
+    
+    <!-- Listeners for report management -->
+    <listeners>
+        <listener class-name="com.automation.framework.listeners.ReportCleanupListener"/>
+    </listeners>
+    
+    <!-- Suite to run all tests -->
+    <test name="All Tests" preserve-order="true">
+        <classes>
+            <class name="com.automation.runners.TestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Suite to run Smoke Tests only -->
+    <!-- Uncomment to run smoke tests only
+    <test name="Smoke Tests" preserve-order="true">
+        <classes>
+            <class name="com.automation.runners.SmokeTestRunner"/>
+        </classes>
+    </test>
+    -->
+    
+    <!-- Suite to run Regression Tests only -->
+    <!-- Uncomment to run regression tests only
+    <test name="Regression Tests" preserve-order="true">
+        <classes>
+            <class name="com.automation.runners.RegressionTestRunner"/>
+        </classes>
+    </test>
+    -->
+    
+</suite>
+

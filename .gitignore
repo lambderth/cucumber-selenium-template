@@ -1,0 +1,160 @@
+# ===================================
+# Java & Compiled Files
+# ===================================
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ===================================
+# Maven
+# ===================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ===================================
+# Eclipse
+# ===================================
+.classpath
+.project
+.settings/
+bin/
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+
+# ===================================
+# IntelliJ IDEA
+# ===================================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# ===================================
+# NetBeans
+# ===================================
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ===================================
+# VS Code
+# ===================================
+.vscode/
+*.code-workspace
+
+# ===================================
+# Test Outputs & Reports
+# ===================================
+test-output/
+test-results/
+cucumber-reports/
+screenshots/
+allure-results/
+allure-report/
+ExtentReports/
+SparkReport/
+PdfReport/
+
+# ===================================
+# Logs
+# ===================================
+*.log
+*.log.*
+logs/
+log/
+
+# ===================================
+# OS Specific Files
+# ===================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+# ===================================
+# Selenium & WebDriver
+# ===================================
+# WebDriverManager cache
+.wdm/
+chromedriver
+geckodriver
+msedgedriver
+*.exe
+*.dmg
+
+# ===================================
+# Temporary Files
+# ===================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# ===================================
+# Security & Credentials
+# ===================================
+# Never commit sensitive data
+*.key
+*.pem
+*.p12
+secrets/
+credentials/
+.env
+.env.local
+
+# ===================================
+# Node (if using JavaScript tools)
+# ===================================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ===================================
+# Backup Files
+# ===================================
+*.bak
+*.backup
+*.old
+*-backup
+
+# ===================================
+# Keep Configuration Examples
+# ===================================
+# Keep config.properties but ignore local overrides
+# config.properties is NOT ignored (framework needs it)
+config.local.properties
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report theme: STANDARD or DARK -->
+        <theme>STANDARD</theme>
+        
+        <!-- Document encoding -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- Protocol for script and stylesheets: HTTP or HTTPS -->
+        <protocol>HTTPS</protocol>
+        
+        <!-- Title of the report -->
+        <documentTitle>Automation Test Report</documentTitle>
+        
+        <!-- Name of the report -->
+        <reportName>Selenium Cucumber Framework - Test Execution Report</reportName>
+        
+        <!-- Timestamp format -->
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+        
+        <!-- Report headline -->
+        <reportHeadline>Test Automation Results</reportHeadline>
+        
+        <!-- Chart location: TOP or BOTTOM -->
+        <chartLocation>TOP</chartLocation>
+        
+        <!-- Enable/Disable offline mode -->
+        <offlineMode>false</offlineMode>
+        
+        <!-- Custom CSS -->
+        <css>
+            <![CDATA[
+            .r-img {
+                width: 100%;
+            }
+            ]]>
+        </css>
+        
+        <!-- Custom JavaScript -->
+        <js>
+            <![CDATA[
+            ]]>
+        </js>
+    </configuration>
+</extentreports>
+
