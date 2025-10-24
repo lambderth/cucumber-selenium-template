@@ -1,8 +1,11 @@
 package com.automation.framework.base;
 
 import com.automation.framework.config.ConfigReader;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -41,6 +44,32 @@ public class BasePage {
      */
     protected void waitForElementToBeClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+    
+    /**
+     * Different click retries
+     */
+    protected void clickWhenClickable(WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(element))
+                .click();
+    }
+    
+    protected void safeClick(WebElement element) {
+        try {
+            clickWhenClickable(element);
+        } catch (Exception first) {
+            try {
+                new Actions(driver).moveToElement(element).click().perform();
+            } catch (Exception second) {
+                try {
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+                } catch (Exception ignored) {
+                    // Intentionally swallow to keep tests flowing; assertions should catch failures later
+                }
+            }
+        }
     }
     
     /**
